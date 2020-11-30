@@ -26,7 +26,8 @@ public class PlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         //Movement Vector
-        Vector3 direction = new Vector3(horizontalInput, 0, verticalInput);
+        Vector3 direction = transform.right * horizontalInput + transform.forward * verticalInput;
+        direction.Normalize();
 
         //Jumping feature
         if (_controller.isGrounded)
@@ -37,8 +38,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-         direction.y = _directionY;
         _directionY -= _gravity * Time.deltaTime;
+         direction.y = _directionY;
         _controller.Move(direction * _moveSpeed * Time.deltaTime);
     }
 }
