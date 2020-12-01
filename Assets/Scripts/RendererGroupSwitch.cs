@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 [ExecuteInEditMode]
 public class RendererGroupSwitch : MonoBehaviour
 {
@@ -17,7 +15,6 @@ public class RendererGroupSwitch : MonoBehaviour
             Refresh();
             tempToggle = Toggle;
         }
-
     }
     public void Refresh()
     {

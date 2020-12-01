@@ -4,9 +4,11 @@ public class MouseLook : MonoBehaviour
 {
     public Transform playerBody;
     public Transform _camera;
-
-    public float _mouseSensitivity = 100f;
+    [SerializeField] private float _mouseSensitivity;
     private float _xRotation = 0f;
+    private float mouseX;
+    private float mouseY;
+    private float mouseSmooth = 0.95f;
 
     void Start()
     {
@@ -17,14 +19,19 @@ public class MouseLook : MonoBehaviour
     void Update()
     {
         //Mouse look inputs
-        float mouseX = Input.GetAxis("Mouse X") * _mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * _mouseSensitivity * Time.deltaTime;
+        mouseX += Input.GetAxis("Mouse X") * _mouseSensitivity * Time.deltaTime;
+        mouseY += Input.GetAxis("Mouse Y") * _mouseSensitivity * Time.deltaTime;
         _xRotation -= mouseY;
 
         //Clamp mouse look rotation
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
 
-        _camera.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+    }
+    private void LateUpdate()
+    {
         playerBody.Rotate(Vector3.up * mouseX);
+        _camera.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+        mouseX *= mouseSmooth;
+        mouseY *= mouseSmooth;
     }
 }
