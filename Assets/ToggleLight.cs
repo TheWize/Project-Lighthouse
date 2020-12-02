@@ -9,6 +9,7 @@ public class ToggleLight : MonoBehaviour
 
     void Start()
     {
+        Toggle = false;
         light = GetComponent<Light>();
         SetLight();
     }
@@ -31,7 +32,7 @@ public class ToggleLight : MonoBehaviour
         }
         else
         {
-            light.intensity = 0.2f;
+            light.intensity = 0f;
         }
     }
 

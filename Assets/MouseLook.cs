@@ -26,12 +26,10 @@ public class MouseLook : MonoBehaviour
         //Clamp mouse look rotation
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
 
-    }
-    private void LateUpdate()
-    {
         playerBody.Rotate(Vector3.up * mouseX);
         _camera.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         mouseX *= mouseSmooth;
         mouseY *= mouseSmooth;
+
     }
 }

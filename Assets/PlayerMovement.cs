@@ -37,9 +37,11 @@ public class PlayerMovement : MonoBehaviour
                 _directionY = _jumpSpeed;
             }
         }
-
-        _directionY -= _gravity * Time.deltaTime;
-         direction.y = _directionY;
+        else
+        {
+            _directionY -= _gravity * Time.deltaTime;
+            direction.y = _directionY;
+        }
         _controller.Move(direction * _moveSpeed * Time.deltaTime);
     }
 }
