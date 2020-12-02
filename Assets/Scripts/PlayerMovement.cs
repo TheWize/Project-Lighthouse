@@ -3,6 +3,7 @@
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController _controller;
+    private float _directionY;
 
     [SerializeField]
     private float _jumpSpeed = 2f;
@@ -10,9 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private float _gravity = 9.81f;
     [SerializeField]
     private float _moveSpeed = 4f;
-  
-    private float _directionY;
- 
+    [SerializeField]
+    private bool _isGrounded;
+
+    Vector3 direction;
+
     void Start()
     {
         //Assign _controller to CharacterController component
@@ -22,26 +25,31 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //CharacterController Inputs
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
 
         //Movement Vector
-        Vector3 direction = transform.right * horizontalInput + transform.forward * verticalInput;
+        direction = transform.right * horizontalInput + transform.forward * verticalInput;
         direction.Normalize();
 
-        //Jumping feature
+        _isGrounded = _controller.isGrounded;
         if (_controller.isGrounded)
         {
+            _directionY = 0;
+            //Jumping feature
             if (Input.GetButtonDown("Jump"))
             {
                 _directionY = _jumpSpeed;
             }
+
+            if (Input.GetButtonDown("Shift"))
+            {
+
+            }
         }
-        else
-        {
-            _directionY -= _gravity * Time.deltaTime;
-            direction.y = _directionY;
-        }
+            
+        _directionY -= _gravity * Time.deltaTime;
+        direction.y = _directionY;
         _controller.Move(direction * _moveSpeed * Time.deltaTime);
     }
 }
