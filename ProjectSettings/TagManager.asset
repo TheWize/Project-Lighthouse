@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Floor
   - Wall_Collision
   - Floor_Collision
   - Structure
+  - DoorTrigger
   layers:
   - Default
   - TransparentFX

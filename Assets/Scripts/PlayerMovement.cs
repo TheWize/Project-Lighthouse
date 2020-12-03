@@ -6,18 +6,20 @@ public class PlayerMovement : MonoBehaviour
     private float _directionY;
 
     [SerializeField]
-    private float _jumpSpeed = 2f;
+    private float _jumpForce; //2f
+    private const float GRAVITY = 9.81f;
     [SerializeField]
-    private float _gravity = 9.81f;
+    private float _walkSpeed; //10.5f
     [SerializeField]
-    private float _moveSpeed = 4f;
-    [SerializeField]
-    private bool _isGrounded;
-
+    private float _runSpeed; // 15f
+    public bool _isGrounded;
+    private readonly KeyCode _runningButton = KeyCode.LeftShift;
+    private bool IsRunning { get => Input.GetKey(_runningButton); }
     Vector3 direction;
 
     void Start()
     {
+        _isGrounded = false;
         //Assign _controller to CharacterController component
         _controller = GetComponent<CharacterController>();
     }
@@ -27,29 +29,24 @@ public class PlayerMovement : MonoBehaviour
         //CharacterController Inputs
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
+        _isGrounded = _controller.isGrounded;
 
         //Movement Vector
         direction = transform.right * horizontalInput + transform.forward * verticalInput;
         direction.Normalize();
-
-        _isGrounded = _controller.isGrounded;
-        if (_controller.isGrounded)
+        //_isGrounded = _controller.isGrounded;
+        if (_isGrounded)
         {
-            _directionY = 0;
+            _directionY = -GRAVITY * Time.deltaTime;
             //Jumping feature
             if (Input.GetButtonDown("Jump"))
             {
-                _directionY = _jumpSpeed;
-            }
-
-            if (Input.GetButtonDown("Shift"))
-            {
-
+                _directionY += _jumpForce;
             }
         }
             
-        _directionY -= _gravity * Time.deltaTime;
+        _directionY -= GRAVITY * Time.deltaTime;
         direction.y = _directionY;
-        _controller.Move(direction * _moveSpeed * Time.deltaTime);
+        _controller.Move(direction * (IsRunning ? _runSpeed : _walkSpeed) * Time.deltaTime);
     }
 }
