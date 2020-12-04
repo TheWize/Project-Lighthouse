@@ -10,8 +10,6 @@ public class Door : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        animator.ResetTrigger("Close");
-        animator.ResetTrigger("Open");
     }
     private void Update()
     {
