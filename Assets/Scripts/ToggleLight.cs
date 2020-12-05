@@ -30,7 +30,6 @@ public class ToggleLight : MonoBehaviour
         if (Toggle)
         {
             myLight.intensity = 2f;
-            StartCoroutine(LightningStrike());
         }
         else
         {
