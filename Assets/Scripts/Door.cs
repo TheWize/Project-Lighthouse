@@ -7,13 +7,14 @@ using UnityEngine.Events;
 public class Door : MonoBehaviour
 {
     private Animator animator;
+    private bool IsOpen { get => animator.GetBool("isOpen"); }
 
     [Header("Interactivity")]
     [SerializeField] private bool autoOpen;
     [SerializeField] private bool autoClose;
     [SerializeField] private bool locked;
     [SerializeField] private bool LockOnClose;
-    [SerializeField] private KeyTrigger Key;
+    public KeyTrigger Key;
 
     [Space]
 
@@ -23,35 +24,12 @@ public class Door : MonoBehaviour
     [SerializeField] private AudioSource CloseSound;
     [SerializeField] private AudioSource UnlockedSound;
 
-    [Header("ExtraTriggers")]
-    public DoorTrigger trigger1;
-    public DoorTrigger trigger2;
-
     private void Start()
     {
         animator = GetComponent<Animator>();
         if (autoOpen || Key == null)
         {
             locked = false;
-        }
-    }
-    private void Update()
-    {
-        if (trigger1 != null && trigger1.gameObject.activeInHierarchy)
-        {
-            if (trigger1.triggered)
-            {
-                Trigger1();
-                trigger1.gameObject.SetActive(false);
-            }
-        }
-        if (trigger2 != null && trigger2.gameObject.activeInHierarchy)
-        {
-            if (trigger2.triggered)
-            {
-                Trigger2();
-                trigger2.gameObject.SetActive(false);
-            }
         }
     }
     private void OpenDoor()
@@ -81,6 +59,10 @@ public class Door : MonoBehaviour
             locked = true;
         }
     }
+    public virtual void ExtraTrigger(int num)
+    {
+        animator.SetTrigger("Trigger" + num);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && autoOpen)
@@ -101,18 +83,19 @@ public class Door : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && Input.GetMouseButtonDown(0))
+        if (other.gameObject.CompareTag("Player"))
         {
-            OpenDoor();
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (!IsOpen)
+                {
+                    OpenDoor();
+                }
+                else
+                {
+                    CloseDoor();
+                }
+            }
         }
-    }
-    public void Trigger1()
-    {
-        animator.SetTrigger("Trigger1");
-
-    }
-    public void Trigger2()
-    {
-        animator.SetTrigger("Trigger2");
     }
 }

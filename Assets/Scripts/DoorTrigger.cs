@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
-public class DoorTrigger : MonoBehaviour
+public class DoorTrigger : Door
 {
-    private Door doorRef;
-    public bool triggered;
-    private void Start()
-    {
-        triggered = false;
-        doorRef = GetComponentInParent<Door>();
-    }
+    [SerializeField] private int TriggerNum;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            triggered = true;
+            ExtraTrigger(TriggerNum);
         }
+    }
+    public override void ExtraTrigger(int num)
+    {
+        base.ExtraTrigger(num);
     }
 }

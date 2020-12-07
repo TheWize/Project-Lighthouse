@@ -176,8 +176,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.115}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0.4352}
+  m_SizeDelta: {x: 1.0316639, y: 0.9688678}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180791105
 MonoBehaviour:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_text: "I shivered oddly in the cold, thin air,\r\nAnd wondered where I was and
     how I came,\r\nWhen a cloaked form against a campfire's glare\r\nRose and approached,
     and called me by my name.\r\nStaring at that dead face beneath the hood,\r\nI
-    ceased to hope - because I understood.\n\n\tJohn"
+    ceased to hope because I understood.\n\n\t                  \n\t\t       John"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1fa6082b51eb9e49af49905ebec47aa, type: 2}
   m_sharedMaterial: {fileID: -3031058653821077582, guid: c1fa6082b51eb9e49af49905ebec47aa,
@@ -229,19 +229,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.1
-  m_fontSizeBase: 1.1
+  m_fontSize: 0.7
+  m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: -5.13
+  m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -22.53
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 49.548412, y: 48.933758, z: 49.51295, w: 49.88304}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -566,7 +566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112390258}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.48, y: 2.51, z: 2.14}
+  m_LocalPosition: {x: -6.561727, y: 2.51, z: 7.023141}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 646987394}
@@ -584,7 +584,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7732293ae037cb94f91f5410198713c0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0417271
+      value: -6.39
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7732293ae037cb94f91f5410198713c0,
         type: 3}
@@ -594,7 +594,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7732293ae037cb94f91f5410198713c0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.8468595
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7732293ae037cb94f91f5410198713c0,
         type: 3}
@@ -1079,6 +1079,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3127931866365280138, guid: 7126221bf4c95dc4a9d086cff246f82d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127931866365280138, guid: 7126221bf4c95dc4a9d086cff246f82d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511534259257384377, guid: 7126221bf4c95dc4a9d086cff246f82d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511534259257384377, guid: 7126221bf4c95dc4a9d086cff246f82d,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 8.69
+      objectReference: {fileID: 0}
     - target: {fileID: 7174088531805265032, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
       propertyPath: m_Name
@@ -1097,27 +1117,27 @@ PrefabInstance:
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.08
+      value: 11.24
       objectReference: {fileID: 0}
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.0000014752147
       objectReference: {fileID: 0}
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
@@ -1132,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180.00002
       objectReference: {fileID: 0}
     - target: {fileID: 7174088531805265033, guid: 7126221bf4c95dc4a9d086cff246f82d,
         type: 3}

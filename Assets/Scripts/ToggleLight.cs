@@ -49,5 +49,4 @@ public class ToggleLight : MonoBehaviour
             myLight.intensity = 0f;
         }
     }
-
 }
