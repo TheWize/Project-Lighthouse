@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
 {
     private Animator animator;
     private bool IsOpen { get => animator.GetBool("isOpen"); }
+    private bool canClick;
+    private bool mouseClicked;
 
     [Header("Interactivity")]
     [SerializeField] private bool autoOpen;
@@ -30,6 +32,19 @@ public class Door : MonoBehaviour
         if (autoOpen || Key == null)
         {
             locked = false;
+        }
+        canClick = false;
+        mouseClicked = false;
+    }
+    private void Update()
+    {
+        if (!canClick)
+        {
+            return;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            mouseClicked = true;
         }
     }
     private void OpenDoor()
@@ -65,16 +80,20 @@ public class Door : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && autoOpen)
+        if (other.gameObject.CompareTag("Player"))
         {
-            locked = false;
-            OpenDoor();
+            canClick = true;
+            if (autoOpen)
+            {
+                OpenDoor();
+            }
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            canClick = false;
             if (autoClose)
             {
                 CloseDoor();
@@ -85,8 +104,9 @@ public class Door : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (mouseClicked)
             {
+                mouseClicked = false;
                 if (!IsOpen)
                 {
                     OpenDoor();

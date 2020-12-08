@@ -11,7 +11,11 @@ public class KeyTrigger : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && Input.GetMouseButtonDown(0))
+        if (taken)
+        {
+            return;
+        }
+        if (other.gameObject.CompareTag("Player") && Input.GetMouseButton(0))
         {
             OnTaken();
         }
@@ -24,6 +28,6 @@ public class KeyTrigger : MonoBehaviour
         }
         taken = true;
         StartCoroutine(TextDisplay.Instance.Play("Key was picked", 1f));
-        GetComponent<MeshRenderer>().enabled = false;
+        GetComponentInChildren<MeshRenderer>().enabled = false;
     }
 }
