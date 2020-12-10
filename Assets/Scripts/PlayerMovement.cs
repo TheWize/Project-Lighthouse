@@ -3,19 +3,17 @@
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController _controller;
-    private float _directionY;
+    private Vector3 direction;
 
-    [SerializeField]
-    private float _jumpForce; //2f
+    [SerializeField] private float _jumpForce; // Default: 2f
+    [SerializeField] private float _walkSpeed; // Default: 11f
+    [SerializeField] private float _runSpeed; // Default: null
+
     private const float GRAVITY = 9.81f;
-    [SerializeField]
-    private float _walkSpeed; //10.5f
-    [SerializeField]
-    private float _runSpeed; // 15f
+    private float _directionY;
     public bool _isGrounded;
     private readonly KeyCode _runningButton = KeyCode.LeftShift;
     private bool IsRunning { get => Input.GetKey(_runningButton); }
-    Vector3 direction;
 
     void Start()
     {
