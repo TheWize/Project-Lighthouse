@@ -8,7 +8,7 @@ public class MouseLook : MonoBehaviour
     private float _xRotation = 0f;
     private float mouseX;
     private float mouseY;
-    private readonly float mouseSmooth = 0.95f;
+    private readonly float mouseSmooth = 0.9f; //Default: 0.95f
 
     void Start()
     {
@@ -25,7 +25,6 @@ public class MouseLook : MonoBehaviour
 
         //Clamp mouse look rotation
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
-
     }
     private void LateUpdate()
     {
