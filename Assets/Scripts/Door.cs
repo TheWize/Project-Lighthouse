@@ -12,10 +12,10 @@ public class Door : MonoBehaviour
     private bool mouseClicked;
 
     [Header("Interactivity")]
-    [SerializeField] private bool autoOpen;
-    [SerializeField] private bool autoClose;
-    [SerializeField] private bool locked;
-    [SerializeField] private bool LockOnClose;
+    public bool autoOpen;
+    public bool autoClose;
+    public bool LockOnClose;
+    public bool locked;
     public KeyTrigger Key;
 
     [Space]
@@ -47,7 +47,7 @@ public class Door : MonoBehaviour
             mouseClicked = true;
         }
     }
-    private void OpenDoor()
+    public void OpenDoor()
     {
         if (locked)
         {
@@ -66,7 +66,7 @@ public class Door : MonoBehaviour
             animator.SetBool("isOpen", true);
         }
     }
-    private void CloseDoor()
+    public void CloseDoor()
     {
         animator.SetBool("isOpen", false);
         if (LockOnClose)
@@ -74,7 +74,7 @@ public class Door : MonoBehaviour
             locked = true;
         }
     }
-    public virtual void ExtraTrigger(int num)
+    public void ExtraTrigger(int num)
     {
         animator.SetTrigger("Trigger" + num);
     }
