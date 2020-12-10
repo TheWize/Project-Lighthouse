@@ -8,7 +8,7 @@ public class MouseLook : MonoBehaviour
     private float _xRotation = 0f;
     private float mouseX;
     private float mouseY;
-    [SerializeField] private float mouseSmooth = 0.8f; //Default: 0.95f
+    [SerializeField] private float mouseSmooth = 0.95f; //Default: 0.95f
 
     void Start()
     {
@@ -21,11 +21,11 @@ public class MouseLook : MonoBehaviour
         //Mouse look inputs
         mouseX += Input.GetAxis("Mouse X") * _mouseSensitivity * Time.deltaTime;
         mouseY += Input.GetAxis("Mouse Y") * _mouseSensitivity * Time.deltaTime;
-        _xRotation -= mouseY;
 
-        //Clamp mouse look rotation
+        _xRotation -= mouseY;
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
     }
+
     private void LateUpdate()
     {
         playerBody.Rotate(Vector3.up * mouseX);

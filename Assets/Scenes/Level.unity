@@ -10876,7 +10876,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9edeeb803ddd39842a6e3810b9fe3022,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.629
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9edeeb803ddd39842a6e3810b9fe3022,
         type: 3}
@@ -10926,17 +10926,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9edeeb803ddd39842a6e3810b9fe3022,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7836856
+      value: 0.7366645
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9edeeb803ddd39842a6e3810b9fe3022,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7836856
+      value: 0.7366645
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9edeeb803ddd39842a6e3810b9fe3022,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7836856
+      value: 0.7366645
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9edeeb803ddd39842a6e3810b9fe3022,
         type: 3}
@@ -34837,17 +34837,17 @@ PrefabInstance:
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.1
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.9
+      value: -293.5
       objectReference: {fileID: 0}
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
@@ -34893,6 +34893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _mouseSensitivity
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 750835396872977381, guid: d29f1fbe7d555634ca7c583a4ba9156e,
+        type: 3}
+      propertyPath: mouseSmooth
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 750835396872977384, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}

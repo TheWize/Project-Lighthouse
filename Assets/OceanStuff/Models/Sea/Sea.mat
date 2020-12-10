@@ -72,7 +72,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FresnelScale: 0.15
+    - _FresnelScale: 1.05
     - _Glossiness: 0.5
     - _Intensity: 0
     - _Metallic: 0
@@ -86,13 +86,13 @@ Material:
     - _WaveLengthInverse: 0.1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.02745098, b: 0.12941177, a: 0.934}
+    - _BaseColor: {r: 0, g: 0.02745098, b: 0.078431375, a: 0.9647059}
     - _BumpDirection: {r: 40, g: 40, b: 40, a: -40}
     - _BumpTiling: {r: 0.05, g: 0.07, b: 0.08, a: 0.06}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DistortParams: {r: 1.44, g: 0.24, b: 1.85, a: -0.53}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectionColor: {r: 0, g: 0, b: 0.023529412, a: 0.9647059}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 0}
     - _WaterColor: {r: 0, g: 0.033018835, b: 0.1981132, a: 1}
     - _WorldLightDir: {r: -0.03, g: -0.201, b: -1, a: 0}
