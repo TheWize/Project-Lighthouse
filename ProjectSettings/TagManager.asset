@@ -18,8 +18,8 @@ TagManager:
   - 
   - 
   - DustParticles
-  - 
-  - 
+  - Fresnel
+  - Lighthouse
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ys
+    uniqueID: 1689475685
     locked: 0

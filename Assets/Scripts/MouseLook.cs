@@ -8,7 +8,7 @@ public class MouseLook : MonoBehaviour
     private float _xRotation = 0f;
     private float mouseX;
     private float mouseY;
-    private readonly float mouseSmooth = 0.9f; //Default: 0.95f
+    [SerializeField] private float mouseSmooth = 0.8f; //Default: 0.95f
 
     void Start()
     {
