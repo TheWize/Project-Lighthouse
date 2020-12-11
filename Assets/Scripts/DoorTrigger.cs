@@ -26,7 +26,7 @@ public class DoorTrigger : MonoBehaviour
         }
         if (num == 2)
         {
-            door.LockOnClose = true;
+            door.LockIndefinetly = true;
             door.CloseDoor();
         }
         else

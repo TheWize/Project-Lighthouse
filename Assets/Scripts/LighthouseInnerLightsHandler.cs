@@ -5,35 +5,22 @@ using UnityEngine;
 public class LighthouseInnerLightsHandler : MonoBehaviour
 {
     private bool canActivate;
-
+    public Animator anim;
     private void Start()
     {
         canActivate = false;
     }
     // Update is called once per frame
-    void Update()
-    {
-        if (!canActivate)
-        {
-            return;
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            GetComponentInParent<Animator>().SetTrigger("Trigger");
-        }
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            canActivate = true;
+            Invoke("PlayAnim", 1f);
         }
     }
-    private void OnTriggerExit(Collider other)
+    private void PlayAnim()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            canActivate = false;
-        }
+        anim.SetTrigger("Trigger");
     }
 }

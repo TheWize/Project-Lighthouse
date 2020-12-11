@@ -14,7 +14,7 @@ public class Door : MonoBehaviour
     [Header("Interactivity")]
     public bool autoOpen;
     public bool autoClose;
-    public bool LockOnClose;
+    public bool LockIndefinetly;
     public bool locked;
     public KeyTrigger Key;
 
@@ -49,6 +49,10 @@ public class Door : MonoBehaviour
     }
     public void OpenDoor()
     {
+        if (LockIndefinetly)
+        {
+            return;
+        }
         if (locked)
         {
             if (Key.taken)
@@ -69,7 +73,7 @@ public class Door : MonoBehaviour
     public void CloseDoor()
     {
         animator.SetBool("isOpen", false);
-        if (LockOnClose)
+        if (LockIndefinetly)
         {
             locked = true;
         }
