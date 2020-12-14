@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
     private bool canTrigger;
     public GameObject[] objectsToActivate;
     private bool mouseDown { get => Input.GetMouseButtonDown(0); }
-    // Start is called before the first frame update
     void Start()
     {
+        isWin.playerWon = false;
         canTrigger = false;
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canTrigger)
+        if (mouseDown && canTrigger)
         {
             WinFunc();
         }
@@ -23,14 +24,14 @@ public class Win : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            canTrigger = false;
+            canTrigger = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            canTrigger = true;
+            canTrigger = false;
         }
     }
     private void WinFunc()
@@ -39,5 +40,7 @@ public class Win : MonoBehaviour
         {
             item.SetActive(true);
         }
+        isWin.playerWon = true;
+        SceneManager.LoadScene(0);
     }
 }
