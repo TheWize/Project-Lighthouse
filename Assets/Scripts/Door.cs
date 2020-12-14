@@ -21,9 +21,9 @@ public class Door : MonoBehaviour
     [Space]
 
     [Header("Feedback")]
-    [SerializeField] private AudioSource LockedSound;
     [SerializeField] private AudioSource OpenSound;
     [SerializeField] private AudioSource CloseSound;
+    [SerializeField] private AudioSource LockedSound;
     [SerializeField] private AudioSource UnlockedSound;
 
     private void Start()
@@ -59,6 +59,7 @@ public class Door : MonoBehaviour
             {
                 UnlockedSound.Play();
                 locked = false;
+                animator.SetBool("isOpen", true);
             }
             else
             {

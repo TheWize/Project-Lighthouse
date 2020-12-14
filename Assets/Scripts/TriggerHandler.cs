@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerHandler : MonoBehaviour
 {
     [SerializeField] private int TriggerNum;
+    [SerializeField] private GameObject flashlight;
     Door door;
 
     private void Start()
@@ -15,6 +16,9 @@ public class TriggerHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (TriggerNum == 3)
+            {
+            }
             ExtraTrigger(TriggerNum);
         }
     }
@@ -26,8 +30,9 @@ public class TriggerHandler : MonoBehaviour
         }
         if (num == 2)
         {
-            door.LockIndefinetly = true;
+            flashlight.SetActive(false);
             door.CloseDoor();
+            door.LockIndefinetly = true;
         }
         else
         {
@@ -39,6 +44,7 @@ public class TriggerHandler : MonoBehaviour
         door.OpenDoor();
         yield return new WaitForSeconds(2f);
         door.CloseDoor();
+        door.locked = true;
         gameObject.SetActive(false);
     }
 }

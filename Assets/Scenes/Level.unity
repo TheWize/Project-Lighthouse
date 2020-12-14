@@ -9575,9 +9575,9 @@ MonoBehaviour:
   LockIndefinetly: 0
   locked: 0
   Key: {fileID: 0}
-  LockedSound: {fileID: 0}
   OpenSound: {fileID: 0}
   CloseSound: {fileID: 0}
+  LockedSound: {fileID: 0}
   UnlockedSound: {fileID: 0}
 --- !u!4 &170236974 stripped
 Transform:
@@ -28634,6 +28634,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5675033567086779180, guid: 1d7bb87a1b027c942960888d73c2c756, type: 3}
+--- !u!1 &799584347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 681029017, guid: d29f1fbe7d555634ca7c583a4ba9156e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1080572829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &799743765
 GameObject:
   m_ObjectHideFlags: 0
@@ -35891,17 +35897,17 @@ PrefabInstance:
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.71
+      value: -78.3
       objectReference: {fileID: 0}
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.8
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -293.55
+      value: 48.8
       objectReference: {fileID: 0}
     - target: {fileID: 750835396872977380, guid: d29f1fbe7d555634ca7c583a4ba9156e,
         type: 3}
@@ -36203,9 +36209,9 @@ MonoBehaviour:
   LockIndefinetly: 0
   locked: 0
   Key: {fileID: 0}
-  LockedSound: {fileID: 0}
   OpenSound: {fileID: 0}
   CloseSound: {fileID: 0}
+  LockedSound: {fileID: 0}
   UnlockedSound: {fileID: 0}
 --- !u!95 &1090737811
 Animator:
@@ -58358,6 +58364,11 @@ PrefabInstance:
       propertyPath: TriggerNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2460693954719935581, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
+        type: 3}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 799584347}
     - target: {fileID: 2513122937127950577, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
       propertyPath: m_IsActive
@@ -58491,12 +58502,12 @@ PrefabInstance:
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.3
+      value: -3.67
       objectReference: {fileID: 0}
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.8
+      value: 9.66
       objectReference: {fileID: 0}
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
@@ -58506,7 +58517,7 @@ PrefabInstance:
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7441129
+      value: 0.8520406
       objectReference: {fileID: 0}
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
@@ -58516,12 +58527,12 @@ PrefabInstance:
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.668054
+      value: 0.5234759
       objectReference: {fileID: 0}
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 96.16601
+      value: 116.869
       objectReference: {fileID: 0}
     - target: {fileID: 7640278740290062430, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
@@ -58531,7 +58542,7 @@ PrefabInstance:
     - target: {fileID: 7643295355538809231, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
       propertyPath: locked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7643295355538809231, guid: b1d5ea02c2bd8e741a97caccde9c6a84,
         type: 3}
