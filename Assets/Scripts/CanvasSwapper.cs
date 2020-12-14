@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 
 public class CanvasSwapper : MonoBehaviour
 {
@@ -23,14 +21,7 @@ public class CanvasSwapper : MonoBehaviour
 
     public void QuitGame()
     {
-        if(Application.isEditor)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else
-        {
-            Application.Quit();
-        }
+        Application.Quit();
     }
 
     public void ActivateCredits()

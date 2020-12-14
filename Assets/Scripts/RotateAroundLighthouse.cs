@@ -1,22 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RotateAroundLighthouse : MonoBehaviour
 {
-    Light light;
+    Light Light;
     public Transform Axis;
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
-        light = GetComponentInChildren<Light>();
+        Light = GetComponentInChildren<Light>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Axis.Rotate(Vector3.up * Time.deltaTime * speed);
-        light.transform.LookAt(this.transform);
+        Light.transform.LookAt(this.transform);
     }
 }

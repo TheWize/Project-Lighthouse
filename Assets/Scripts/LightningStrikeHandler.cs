@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class LightningStrikeHandler : MonoBehaviour
@@ -16,7 +15,8 @@ public class LightningStrikeHandler : MonoBehaviour
         myAudio.transform.parent = null;
         yield return new WaitForSeconds(.5f);
         myParentsLight.intensity = 5f;
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(.5f);
+        //yield return new WaitForEndOfFrame();
         myParentsLight.intensity = 0f;
         yield return new WaitForSeconds(0.2f);
         myParentsLight.intensity = 5f;
