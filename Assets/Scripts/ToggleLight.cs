@@ -36,17 +36,5 @@ public class ToggleLight : MonoBehaviour
             myLight.intensity = 0f;
         }
     }
-    private IEnumerator LightningStrike()
-    {
-        myLight.intensity = 2f;
-        yield return new WaitForEndOfFrame();
-        myLight.intensity = 0f;
-        if (Random.Range(0f,1f) > 0.5f)
-        {
-            yield return new WaitForSeconds(Random.Range(0.01f, 0.15f));
-            myLight.intensity = 2f;
-            yield return new WaitForEndOfFrame();
-            myLight.intensity = 0f;
-        }
-    }
+    
 }

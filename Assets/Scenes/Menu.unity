@@ -214,7 +214,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 123
+  m_fontSize: 36.7
   m_fontSizeBase: 171.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 103
+  m_fontSize: 17.45
   m_fontSizeBase: 34.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10368,7 +10368,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 207.95
+  m_fontSize: 63.8
   m_fontSizeBase: 171.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12625,7 +12625,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 104.2
+  m_fontSize: 16.75
   m_fontSizeBase: 34.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -21139,7 +21139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoOpen: 0
   autoClose: 0
-  LockOnClose: 0
+  LockIndefinetly: 0
   locked: 0
   Key: {fileID: 0}
   LockedSound: {fileID: 0}
@@ -30285,7 +30285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoOpen: 0
   autoClose: 0
-  LockOnClose: 0
+  LockIndefinetly: 0
   locked: 0
   Key: {fileID: 0}
   LockedSound: {fileID: 0}
@@ -37523,7 +37523,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 99
+  m_fontSize: 17
   m_fontSizeBase: 34.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -41710,7 +41710,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.55
+  m_fontSize: 28.05
   m_fontSizeBase: 34.2
   m_fontWeight: 400
   m_enableAutoSizing: 1

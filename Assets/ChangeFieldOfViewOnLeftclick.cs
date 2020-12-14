@@ -39,6 +39,5 @@ public class ChangeFieldOfViewOnLeftclick : MonoBehaviour
             }
         }
         cam.fieldOfView = setFloat;
-        Debug.Log(setFloat);
     }
 }

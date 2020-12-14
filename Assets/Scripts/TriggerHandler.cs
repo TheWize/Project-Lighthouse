@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
-public class DoorTrigger : MonoBehaviour
+public class TriggerHandler : MonoBehaviour
 {
     [SerializeField] private int TriggerNum;
     Door door;
